@@ -19,10 +19,12 @@ Open Login Page
 
 Input Username
     [Arguments]  ${username}
+    clear element text  id:user-name
     input text      id:user-name    ${username}
 
 Input Password
     [Arguments]  ${pass}
+    clear element text  id:password
     input text      id:password     ${pass}
 
 Submit
@@ -31,6 +33,11 @@ Submit
 Logout
     click element  id:react-burger-menu-btn
     click element  id:logout_sidebar_link
+
+Error Message should be
+   [Arguments]  ${text}
+   page should contain  ${text}
+   click element  class:error-button
 
 
 
