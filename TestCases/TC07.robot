@@ -15,7 +15,13 @@ Dropdowns Selection and Iterating On Webelement List
     select from list by label  daybox   27
 
 
-    ${elemenets}=    get webelements  class:form-control
+#    ${elemenets}=    get webelements  class:form-control
+#    input text  ${elemenets}[0]     Hello
+#    input text  ${elemenets}[1]     World
+#    input text  ${elemenets}[2]     Dhaka-1205
+
+
+    @{elemenets}=    get webelements  class:form-control
     input text  ${elemenets}[0]     Hello
     input text  ${elemenets}[1]     World
     input text  ${elemenets}[2]     Dhaka-1205

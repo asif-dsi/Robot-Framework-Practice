@@ -1,63 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.7.0 on win32)" generated="20221120 20:11:07.537" rpa="false" schemaversion="2">
-<suite id="s1" name="TC07" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\TC07.robot">
-<test id="s1-t1" name="Dropdowns Selection">
+<robot generator="Robot 4.1.3 (Python 3.7.0 on win32)" generated="20221122 21:14:02.290" rpa="false" schemaversion="2">
+<suite id="s1" name="DataDriven01" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\DataDriven01.robot">
+<kw name="Launch Browser" library="login_resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://demo.automationtesting.in/Register.html</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20221120 20:11:07.672" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
-<status status="PASS" starttime="20221120 20:11:07.672" endtime="20221120 20:11:12.052"/>
+<msg timestamp="20221122 21:14:02.438" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221122 21:14:02.438" endtime="20221122 21:14:04.039"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 20:11:12.055" endtime="20221120 20:11:12.178"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>5 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20221120 20:11:12.178" endtime="20221120 20:11:12.181"/>
+<status status="PASS" starttime="20221122 21:14:04.040" endtime="20221122 21:14:04.147"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.5</arg>
+<arg>1</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221120 20:11:12.181" endtime="20221120 20:11:12.181"/>
+<status status="PASS" starttime="20221122 21:14:04.147" endtime="20221122 21:14:04.148"/>
 </kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>${elemenets}</var>
-<arg>class:form-control</arg>
-<doc>Returns list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20221120 20:11:12.692" level="INFO">${elemenets} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b634d27f7433a7aa182f1b888d66c4df", element="d1f3612f-bca7-498b-9154-5b1f4e1584eb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221120 20:11:12.181" endtime="20221120 20:11:12.692"/>
+<status status="PASS" starttime="20221122 21:14:02.437" endtime="20221122 21:14:04.148"/>
 </kw>
+<test id="s1-t1" name="Login To System">
+<kw name="Valid Login">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Username" library="login_resource">
+<arg>${username}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${elemenets}[0]</arg>
-<arg>Hello</arg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20221120 20:11:12.695" level="INFO">Typing text 'Hello' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="b634d27f7433a7aa182f1b888d66c4df", element="d1f3612f-bca7-498b-9154-5b1f4e1584eb")&gt;'.</msg>
-<status status="PASS" starttime="20221120 20:11:12.693" endtime="20221120 20:11:13.803"/>
+<msg timestamp="20221122 21:14:04.150" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20221122 21:14:04.150" endtime="20221122 21:14:07.243"/>
 </kw>
+<status status="PASS" starttime="20221122 21:14:04.149" endtime="20221122 21:14:07.243"/>
+</kw>
+<kw name="Input Password" library="login_resource">
+<arg>${password}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${elemenets}[1]</arg>
-<arg>World</arg>
+<arg>id:password</arg>
+<arg>${pass}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20221120 20:11:13.803" level="INFO">Typing text 'World' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="b634d27f7433a7aa182f1b888d66c4df", element="fc5d74fd-eff3-409c-8198-148dccbee2db")&gt;'.</msg>
-<status status="PASS" starttime="20221120 20:11:13.803" endtime="20221120 20:11:14.884"/>
+<msg timestamp="20221122 21:14:07.244" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20221122 21:14:07.243" endtime="20221122 21:14:10.333"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elemenets}[2]</arg>
-<arg>Dhaka-1205</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20221120 20:11:14.884" level="INFO">Typing text 'Dhaka-1205' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="b634d27f7433a7aa182f1b888d66c4df", element="80b45a39-92ec-4ec5-b9b4-3b92f0e76edd")&gt;'.</msg>
-<status status="PASS" starttime="20221120 20:11:14.884" endtime="20221120 20:11:15.960"/>
+<status status="PASS" starttime="20221122 21:14:07.243" endtime="20221122 21:14:10.333"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221120 20:11:15.960" endtime="20221120 20:11:18.533"/>
+<kw name="Submit" library="login_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20221122 21:14:10.335" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20221122 21:14:10.335" endtime="20221122 21:14:12.443"/>
 </kw>
-<status status="PASS" starttime="20221120 20:11:07.672" endtime="20221120 20:11:18.533"/>
+<status status="PASS" starttime="20221122 21:14:10.334" endtime="20221122 21:14:12.444"/>
+</kw>
+<kw name="Logout" library="login_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:react-burger-menu-btn</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20221122 21:14:12.445" level="INFO">Clicking element 'id:react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20221122 21:14:12.445" endtime="20221122 21:14:14.502"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:logout_sidebar_link</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20221122 21:14:14.502" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<status status="PASS" starttime="20221122 21:14:14.502" endtime="20221122 21:14:16.561"/>
+</kw>
+<status status="PASS" starttime="20221122 21:14:12.444" endtime="20221122 21:14:16.562"/>
+</kw>
+<status status="PASS" starttime="20221122 21:14:04.149" endtime="20221122 21:14:16.562"/>
+</kw>
+<status status="PASS" starttime="20221122 21:14:04.148" endtime="20221122 21:14:16.563"/>
 </test>
-<status status="PASS" starttime="20221120 20:11:07.539" endtime="20221120 20:11:18.533"/>
+<kw name="Close Browser" library="login_resource" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221122 21:14:16.567" endtime="20221122 21:14:19.655"/>
+</kw>
+<status status="PASS" starttime="20221122 21:14:16.567" endtime="20221122 21:14:19.656"/>
+</kw>
+<status status="PASS" starttime="20221122 21:14:02.292" endtime="20221122 21:14:19.656"/>
 </suite>
 <statistics>
 <total>
@@ -66,7 +90,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC07">TC07</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="DataDriven01">DataDriven01</stat>
 </suite>
 </statistics>
 <errors>
