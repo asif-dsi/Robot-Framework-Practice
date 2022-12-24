@@ -1,374 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221224 18:27:02.390" rpa="false" schemaversion="3">
-<suite id="s1" name="DataDriven02" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Data_Driven\DataDriven02.robot">
-<kw name="Launch Browser" library="Login_Resource" type="SETUP">
+<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221224 20:08:01.483" rpa="false" schemaversion="3">
+<suite id="s1" name="TC04 newTab" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Tests\TC04_newTab.robot">
+<test id="s1-t1" name="New Tab" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://www.startech.com.bd/</arg>
+<arg>firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221224 18:27:02.551" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20221224 18:27:02.551" endtime="20221224 18:27:04.905"/>
+<msg timestamp="20221224 20:08:01.652" level="INFO">Opening browser 'firefox' to base url 'https://www.startech.com.bd/'.</msg>
+<msg timestamp="20221224 20:08:01.652" level="INFO">Firefox driver log is always forced to to: C:\Users\Asif\Desktop\Practice\Python\Robot 1\geckodriver-2.log</msg>
+<status status="PASS" starttime="20221224 20:08:01.652" endtime="20221224 20:08:07.943"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221224 18:27:04.905" endtime="20221224 18:27:05.019"/>
+<status status="PASS" starttime="20221224 20:08:07.943" endtime="20221224 20:08:08.202"/>
 </kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221224 18:27:05.019" endtime="20221224 18:27:05.019"/>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[title='Facebook']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221224 20:08:08.202" level="INFO">Clicking link 'css:a[title='Facebook']'.</msg>
+<status status="PASS" starttime="20221224 20:08:08.202" endtime="20221224 20:08:08.247"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:02.551" endtime="20221224 18:27:05.020"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:11.262" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:08.247" endtime="20221224 20:08:11.262"/>
 </kw>
-<test id="s1-t1" name="Blank Username and Blank Password" line="10">
-<kw name="Invalid Login">
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<arg>Epic sadface: Username is required</arg>
-<kw name="Input Username" library="Login_Resource">
-<arg>${username}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:05.022" endtime="20221224 18:27:07.071"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>url:https://www.facebook.com/star.tech.ltd/</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:11.263" endtime="20221224 20:08:11.341"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:07.071" level="INFO">Typing text '' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20221224 18:27:07.071" endtime="20221224 18:27:10.132"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:14.347" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:11.341" endtime="20221224 20:08:14.347"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:05.021" endtime="20221224 18:27:10.132"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>url:https://www.startech.com.bd/</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:14.347" endtime="20221224 20:08:14.368"/>
 </kw>
-<kw name="Input Password" library="Login_Resource">
-<arg>${password}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:10.133" endtime="20221224 18:27:12.190"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:17.376" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:14.369" endtime="20221224 20:08:17.376"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${pass}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:12.191" level="INFO">Typing text '' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20221224 18:27:12.190" endtime="20221224 18:27:15.271"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221224 20:08:17.376" endtime="20221224 20:08:27.295"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:10.132" endtime="20221224 18:27:15.272"/>
-</kw>
-<kw name="Submit" library="Login_Resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:15.274" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:15.273" endtime="20221224 18:27:17.336"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:15.272" endtime="20221224 18:27:17.336"/>
-</kw>
-<kw name="Error Message should be" library="Login_Resource">
-<arg>${errortext}</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221224 18:27:19.357" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
-<status status="PASS" starttime="20221224 18:27:17.336" endtime="20221224 18:27:19.357"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:error-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:19.357" level="INFO">Clicking element 'class:error-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:19.357" endtime="20221224 18:27:21.397"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:17.336" endtime="20221224 18:27:21.397"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:05.020" endtime="20221224 18:27:21.397"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:05.020" endtime="20221224 18:27:21.398"/>
+<status status="PASS" starttime="20221224 20:08:01.652" endtime="20221224 20:08:27.295"/>
 </test>
-<test id="s1-t2" name="Username and Blank Password" line="11">
-<kw name="Invalid Login">
-<arg>abcd</arg>
-<arg>${EMPTY}</arg>
-<arg>Epic sadface: Password is required</arg>
-<kw name="Input Username" library="Login_Resource">
-<arg>${username}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:21.401" endtime="20221224 18:27:23.438"/>
+<test id="s1-t2" name="New Window" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221224 20:08:27.295" level="INFO">Opening browser 'chrome' to base url 'https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm'.</msg>
+<status status="PASS" starttime="20221224 20:08:27.295" endtime="20221224 20:08:32.011"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:23.439" level="INFO">Typing text 'abcd' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20221224 18:27:23.438" endtime="20221224 18:27:26.502"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221224 20:08:32.011" endtime="20221224 20:08:32.121"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:21.400" endtime="20221224 18:27:26.502"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@value='Open a new window']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221224 20:08:32.122" level="INFO">Clicking button 'xpath://input[@value='Open a new window']'.</msg>
+<status status="PASS" starttime="20221224 20:08:32.122" endtime="20221224 20:08:32.186"/>
 </kw>
-<kw name="Input Password" library="Login_Resource">
-<arg>${password}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:26.502" endtime="20221224 18:27:28.546"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>title:Open a New Window using JavaScript window.open() - Demo</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:32.187" endtime="20221224 20:08:33.951"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${pass}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:28.546" level="INFO">Typing text '' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20221224 18:27:28.546" endtime="20221224 18:27:31.618"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:35.964" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:33.952" endtime="20221224 20:08:35.964"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:26.502" endtime="20221224 18:27:31.618"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>title:Open a New Browser Window using JavaScript - Demo</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:35.964" endtime="20221224 20:08:35.986"/>
 </kw>
-<kw name="Submit" library="Login_Resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:31.619" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:31.619" endtime="20221224 18:27:33.659"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:37.996" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:35.987" endtime="20221224 20:08:37.996"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:31.618" endtime="20221224 18:27:33.659"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221224 20:08:37.996" endtime="20221224 20:08:40.117"/>
 </kw>
-<kw name="Error Message should be" library="Login_Resource">
-<arg>${errortext}</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221224 18:27:35.682" level="INFO">Current page contains text 'Epic sadface: Password is required'.</msg>
-<status status="PASS" starttime="20221224 18:27:33.661" endtime="20221224 18:27:35.682"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:error-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:35.684" level="INFO">Clicking element 'class:error-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:35.682" endtime="20221224 18:27:37.724"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:33.660" endtime="20221224 18:27:37.724"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:21.400" endtime="20221224 18:27:37.724"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:21.399" endtime="20221224 18:27:37.725"/>
+<status status="PASS" starttime="20221224 20:08:27.295" endtime="20221224 20:08:40.117"/>
 </test>
-<test id="s1-t3" name="Valid Username and Invalid Password" line="12">
-<kw name="Invalid Login">
-<arg>standard_user</arg>
-<arg>abcd</arg>
-<arg>Epic sadface: Username and password do not match any user in this service</arg>
-<kw name="Input Username" library="Login_Resource">
-<arg>${username}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:37.729" endtime="20221224 18:27:39.759"/>
+<test id="s1-t3" name="New Window With Handles" line="28">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221224 20:08:40.117" level="INFO">Opening browser 'chrome' to base url 'https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm'.</msg>
+<status status="PASS" starttime="20221224 20:08:40.117" endtime="20221224 20:08:45.385"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:39.761" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20221224 18:27:39.759" endtime="20221224 18:27:42.840"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221224 20:08:45.385" endtime="20221224 20:08:45.499"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:37.729" endtime="20221224 18:27:42.840"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@value='Open a new window']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221224 20:08:45.500" level="INFO">Clicking button 'xpath://input[@value='Open a new window']'.</msg>
+<status status="PASS" starttime="20221224 20:08:45.499" endtime="20221224 20:08:45.567"/>
 </kw>
-<kw name="Input Password" library="Login_Resource">
-<arg>${password}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:42.840" endtime="20221224 18:27:44.881"/>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20221224 20:08:45.574" level="INFO">${handles} = ['CDwindow-CAF739DEBFF610628BC0715C6E6D42D9', 'CDwindow-71C64FDD10C25CC4C536AA9FFCC5E088']</msg>
+<status status="PASS" starttime="20221224 20:08:45.568" endtime="20221224 20:08:45.574"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${pass}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:44.882" level="INFO">Typing text 'abcd' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20221224 18:27:44.881" endtime="20221224 18:27:47.954"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:45.575" endtime="20221224 20:08:45.598"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:42.840" endtime="20221224 18:27:47.954"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:47.604" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:45.599" endtime="20221224 20:08:47.604"/>
 </kw>
-<kw name="Submit" library="Login_Resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:47.955" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:47.955" endtime="20221224 18:27:50.006"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20221224 20:08:47.605" endtime="20221224 20:08:47.614"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:47.954" endtime="20221224 18:27:50.006"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221224 20:08:49.628" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221224 20:08:47.615" endtime="20221224 20:08:49.628"/>
 </kw>
-<kw name="Error Message should be" library="Login_Resource">
-<arg>${errortext}</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221224 18:27:52.035" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
-<status status="PASS" starttime="20221224 18:27:50.006" endtime="20221224 18:27:52.035"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221224 20:08:49.628" endtime="20221224 20:08:51.716"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:error-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:52.036" level="INFO">Clicking element 'class:error-button'.</msg>
-<status status="PASS" starttime="20221224 18:27:52.035" endtime="20221224 18:27:54.071"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:50.006" endtime="20221224 18:27:54.071"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:37.728" endtime="20221224 18:27:54.071"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:37.727" endtime="20221224 18:27:54.071"/>
+<status status="PASS" starttime="20221224 20:08:40.117" endtime="20221224 20:08:51.716"/>
 </test>
-<test id="s1-t4" name="Invalid Username and Valid Password" line="13">
-<kw name="Invalid Login">
-<arg>abcd</arg>
-<arg>secret_sauce</arg>
-<arg>Epic sadface: Username and password do not match any user in this service</arg>
-<kw name="Input Username" library="Login_Resource">
-<arg>${username}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:54.073" endtime="20221224 18:27:56.105"/>
+<test id="s1-t4" name="Navigate Between Pages" line="39">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.youtube.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221224 20:08:51.716" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20221224 20:08:51.716" endtime="20221224 20:08:53.856"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:27:56.106" level="INFO">Typing text 'abcd' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20221224 18:27:56.105" endtime="20221224 18:27:59.189"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20221224 20:08:53.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CEF243]
+	(No symbol) [0x00C77FD1]
+	(No symbol) [0x00B6D04D]
+	(No symbol) [0x00B52D7A]
+	(No symbol) [0x00BBBE7B]
+	(No symbol) [0x00BCC196]
+	(No symbol) [0x00BB8386]
+	(No symbol) [0x00B9163C]
+	(No symbol) [0x00B9269D]
+	GetHandleVerifier [0x00F89A22+2655074]
+	GetHandleVerifier [0x00F7CA24+2601828]
+	GetHandleVerifier [0x00D98C0A+619850]
+	GetHandleVerifier [0x00D97830+614768]
+	(No symbol) [0x00C805FC]
+	(No symbol) [0x00C85968]
+	(No symbol) [0x00C85A55]
+	(No symbol) [0x00C9051B]
+	BaseThreadInitThunk [0x76B200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
+</msg>
+<msg timestamp="20221224 20:08:53.863" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CEF243]
+	(No symbol) [0x00C77FD1]
+	(No symbol) [0x00B6D04D]
+	(No symbol) [0x00B52D7A]
+	(No symbol) [0x00BBBE7B]
+	(No symbol) [0x00BCC196]
+	(No symbol) [0x00BB8386]
+	(No symbol) [0x00B9163C]
+	(No symbol) [0x00B9269D]
+	GetHandleVerifier [0x00F89A22+2655074]
+	GetHandleVerifier [0x00F7CA24+2601828]
+	GetHandleVerifier [0x00D98C0A+619850]
+	GetHandleVerifier [0x00D97830+614768]
+	(No symbol) [0x00C805FC]
+	(No symbol) [0x00C85968]
+	(No symbol) [0x00C85A55]
+	(No symbol) [0x00C9051B]
+	BaseThreadInitThunk [0x76B200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
+</msg>
+<status status="FAIL" starttime="20221224 20:08:53.857" endtime="20221224 20:08:53.866"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:54.073" endtime="20221224 18:27:59.189"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.866" endtime="20221224 20:08:53.867"/>
 </kw>
-<kw name="Input Password" library="Login_Resource">
-<arg>${password}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:27:59.191" endtime="20221224 18:28:01.236"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${pass}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:01.238" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20221224 18:28:01.236" endtime="20221224 18:28:04.312"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:59.190" endtime="20221224 18:28:04.312"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.amazon.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
 </kw>
-<kw name="Submit" library="Login_Resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:04.313" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20221224 18:28:04.313" endtime="20221224 18:28:06.362"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
 </kw>
-<status status="PASS" starttime="20221224 18:28:04.312" endtime="20221224 18:28:06.363"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
 </kw>
-<kw name="Error Message should be" library="Login_Resource">
-<arg>${errortext}</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221224 18:28:08.393" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
-<status status="PASS" starttime="20221224 18:28:06.364" endtime="20221224 18:28:08.393"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:error-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:08.393" level="INFO">Clicking element 'class:error-button'.</msg>
-<status status="PASS" starttime="20221224 18:28:08.393" endtime="20221224 18:28:10.444"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.869" endtime="20221224 20:08:53.869"/>
 </kw>
-<status status="PASS" starttime="20221224 18:28:06.363" endtime="20221224 18:28:10.444"/>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.870" endtime="20221224 20:08:53.870"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:54.073" endtime="20221224 18:28:10.444"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.870" endtime="20221224 20:08:53.870"/>
 </kw>
-<status status="PASS" starttime="20221224 18:27:54.072" endtime="20221224 18:28:10.446"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20221224 20:08:53.872" endtime="20221224 20:08:53.872"/>
+</kw>
+<status status="FAIL" starttime="20221224 20:08:51.716" endtime="20221224 20:08:53.872">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CEF243]
+	(No symbol) [0x00C77FD1]
+	(No symbol) [0x00B6D04D]
+	(No symbol) [0x00B52D7A]
+	(No symbol) [0x00BBBE7B]
+	(No symbol) [0x00BCC196]
+	(No symbol) [0x00BB8386]
+	(No symbol) [0x00B9163C]
+	(No symbol) [0x00B9269D]
+	GetHandleVerifier [0x00F89A22+2655074]
+	GetHandleVerifier [0x00F7CA24+2601828]
+	GetHandleVerifier [0x00D98C0A+619850]
+	GetHandleVerifier [0x00D97830+614768]
+	(No symbol) [0x00C805FC]
+	(No symbol) [0x00C85968]
+	(No symbol) [0x00C85A55]
+	(No symbol) [0x00C9051B]
+	BaseThreadInitThunk [0x76B200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
+</status>
 </test>
-<test id="s1-t5" name="Locked Out user" line="14">
-<kw name="Invalid Login">
-<arg>locked_out_user</arg>
-<arg>secret_sauce</arg>
-<arg>Epic sadface: Sorry, this user has been locked out.</arg>
-<kw name="Input Username" library="Login_Resource">
-<arg>${username}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:28:10.447" endtime="20221224 18:28:12.486"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:12.488" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20221224 18:28:12.486" endtime="20221224 18:28:15.574"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:10.447" endtime="20221224 18:28:15.574"/>
-</kw>
-<kw name="Input Password" library="Login_Resource">
-<arg>${password}</arg>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221224 18:28:15.574" endtime="20221224 18:28:17.606"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:password</arg>
-<arg>${pass}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:17.608" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20221224 18:28:17.606" endtime="20221224 18:28:20.672"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:15.574" endtime="20221224 18:28:20.672"/>
-</kw>
-<kw name="Submit" library="Login_Resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:20.673" level="INFO">Clicking element 'id:login-button'.</msg>
-<status status="PASS" starttime="20221224 18:28:20.672" endtime="20221224 18:28:22.719"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:20.672" endtime="20221224 18:28:22.719"/>
-</kw>
-<kw name="Error Message should be" library="Login_Resource">
-<arg>${errortext}</arg>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${text}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221224 18:28:24.752" level="INFO">Current page contains text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
-<status status="PASS" starttime="20221224 18:28:22.720" endtime="20221224 18:28:24.752"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>class:error-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221224 18:28:24.754" level="INFO">Clicking element 'class:error-button'.</msg>
-<status status="PASS" starttime="20221224 18:28:24.752" endtime="20221224 18:28:26.800"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:22.719" endtime="20221224 18:28:26.800"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:10.446" endtime="20221224 18:28:26.801"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:10.446" endtime="20221224 18:28:26.802"/>
-</test>
-<kw name="Close Browser" library="Login_Resource" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221224 18:28:26.806" endtime="20221224 18:28:29.870"/>
-</kw>
-<status status="PASS" starttime="20221224 18:28:26.805" endtime="20221224 18:28:29.871"/>
-</kw>
-<status status="PASS" starttime="20221224 18:27:02.391" endtime="20221224 18:28:29.871"/>
+<status status="FAIL" starttime="20221224 20:08:01.483" endtime="20221224 20:08:53.875"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="DataDriven02">DataDriven02</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="TC04 newTab">TC04 newTab</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20221224 20:08:53.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CEF243]
+	(No symbol) [0x00C77FD1]
+	(No symbol) [0x00B6D04D]
+	(No symbol) [0x00B52D7A]
+	(No symbol) [0x00BBBE7B]
+	(No symbol) [0x00BCC196]
+	(No symbol) [0x00BB8386]
+	(No symbol) [0x00B9163C]
+	(No symbol) [0x00B9269D]
+	GetHandleVerifier [0x00F89A22+2655074]
+	GetHandleVerifier [0x00F7CA24+2601828]
+	GetHandleVerifier [0x00D98C0A+619850]
+	GetHandleVerifier [0x00D97830+614768]
+	(No symbol) [0x00C805FC]
+	(No symbol) [0x00C85968]
+	(No symbol) [0x00C85A55]
+	(No symbol) [0x00C9051B]
+	BaseThreadInitThunk [0x76B200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
+</msg>
 </errors>
 </robot>
