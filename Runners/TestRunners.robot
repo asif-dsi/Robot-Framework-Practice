@@ -1,21 +1,25 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  FakerLibrary  WITH NAME  faker
 Resource  ../Pages/doRegistration.robot
 Resource  ../Environment/Setup.robot
 Suite Setup  Open My Browser
 Suite Teardown  Close My Browsers
 
 *** Variables ***
-${FirstName}    Mikasa
-${Email}     mikasa@aot1.com
+${FirstName}    Robot
+
 *** Test Cases ***
 User Registration
 #    open my browser
-    create new user to register  ${FirstName}   ${Email}
+    ${fakeEmail}=  faker.email
+    ${fakeFirstName}=  faker.First Name
+    ${fakeLastName}=  faker.Last Name
+    create new user to register  ${FirstName}   ${fakeEmail}
     Input Password  1234
-    Input First Name  Mikasa
-    Input Last Name   Ackerman
-    Input Address  Dhaka-1205
+    Input First Name  ${fakeFirstName}
+    Input Last Name   ${fakeLastName}
+    Input Address  Dhaka-1208
     Select A Country  United States
     Input State  Arizona
     Input City  Chicago
