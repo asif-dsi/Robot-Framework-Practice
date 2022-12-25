@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  FakerLibrary  WITH NAME  faker
+Default Tags    Ignore
 
 *** Variables ***
 ${browser}  chrome

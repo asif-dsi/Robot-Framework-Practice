@@ -1,176 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221225 13:53:22.182" rpa="false" schemaversion="3">
-<suite id="s1" name="TC07 dropdowns" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Tests\TC07_dropdowns.robot">
-<test id="s1-t1" name="Dropdowns Selection and Iterating On Webelement List" line="5">
+<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221225 16:22:25.459" rpa="false" schemaversion="3">
+<suite id="s1" name="TC10 upload" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Tests\TC10_upload.robot">
+<test id="s1-t1" name="Upload A File" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://demo.automationtesting.in/Register.html</arg>
+<arg>https://demoqa.com/upload-download</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221225 13:53:22.389" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
-<status status="PASS" starttime="20221225 13:53:22.389" endtime="20221225 13:53:27.772"/>
+<msg timestamp="20221225 16:22:25.660" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/upload-download'.</msg>
+<status status="PASS" starttime="20221225 16:22:25.660" endtime="20221225 16:22:33.037"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221225 13:53:27.773" endtime="20221225 13:53:27.899"/>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath://input[@id='uploadFile']</arg>
+<arg>C:\\Users\\Asif\\Desktop\\access.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20221225 16:22:33.038" level="INFO">Sending C:\Users\Asif\Desktop\access.png to browser.</msg>
+<status status="PASS" starttime="20221225 16:22:33.038" endtime="20221225 16:22:33.078"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>5 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:27.901"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.5</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:27.901"/>
-</kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{elements}</var>
-<arg>class:form-control</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20221225 13:53:28.427" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:28.427"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>0</value>
-<value>3</value>
-<iter>
-<var name="${i}">0</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Test</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:28.427" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:29.543"/>
-</kw>
-<if>
-<branch type="IF" condition="${i}==1">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Hola!</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.543"/>
-</kw>
-<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.543"/>
-</branch>
-<branch type="ELSE IF" condition="${i}==2">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Adios!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:29.545" endtime="20221225 13:53:29.545"/>
-</kw>
-<kw name="Exit For Loop" library="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:29.545" endtime="20221225 13:53:29.545"/>
-</kw>
-<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.545"/>
-</branch>
-<status status="PASS" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.545"/>
-</if>
-<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:29.545"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Test</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:29.547" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:29.545" endtime="20221225 13:53:30.654"/>
-</kw>
-<if>
-<branch type="IF" condition="${i}==1">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Hola!</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:30.654" level="INFO">Typing text 'Hola!' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
-</kw>
-<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
-</branch>
-<branch type="ELSE IF" condition="${i}==2">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Adios!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
-</kw>
-<kw name="Exit For Loop" library="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
-</kw>
-<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
-</branch>
-<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
-</if>
-<status status="PASS" starttime="20221225 13:53:29.545" endtime="20221225 13:53:31.738"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Test</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:31.738" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="7710e2ed-37b7-4682-9c94-db40122f0dea")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:31.738" endtime="20221225 13:53:32.838"/>
-</kw>
-<if>
-<branch type="IF" condition="${i}==1">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[${i}]</arg>
-<arg>Hola!</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221225 13:53:32.839" endtime="20221225 13:53:32.839"/>
-</kw>
-<status status="NOT RUN" starttime="20221225 13:53:32.839" endtime="20221225 13:53:32.840"/>
-</branch>
-<branch type="ELSE IF" condition="${i}==2">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Adios!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221225 13:53:32.840" endtime="20221225 13:53:32.841"/>
-</kw>
-<kw name="Exit For Loop" library="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<msg timestamp="20221225 13:53:32.842" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20221225 13:53:32.841" endtime="20221225 13:53:32.842"/>
-</kw>
-<status status="PASS" starttime="20221225 13:53:32.840" endtime="20221225 13:53:32.842"/>
-</branch>
-<status status="PASS" starttime="20221225 13:53:32.838" endtime="20221225 13:53:32.842"/>
-</if>
-<status status="PASS" starttime="20221225 13:53:31.738" endtime="20221225 13:53:32.842"/>
-</iter>
-<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:32.842"/>
-</for>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[0]</arg>
-<arg>Hello-Replaced</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:32.844" level="INFO">Typing text 'Hello-Replaced' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:32.843" endtime="20221225 13:53:33.946"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[1]</arg>
-<arg>World-Replaced</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:33.947" level="INFO">Typing text 'World-Replaced' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:33.947" endtime="20221225 13:53:35.043"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${elements}[2]</arg>
-<arg>Dhaka-1205</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221225 13:53:35.043" level="INFO">Typing text 'Dhaka-1205' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="7710e2ed-37b7-4682-9c94-db40122f0dea")&gt;'.</msg>
-<status status="PASS" starttime="20221225 13:53:35.043" endtime="20221225 13:53:36.122"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221225 16:22:36.086" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221225 16:22:33.078" endtime="20221225 16:22:36.086"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221225 13:53:36.123" endtime="20221225 13:53:38.699"/>
+<status status="PASS" starttime="20221225 16:22:36.087" endtime="20221225 16:22:38.202"/>
 </kw>
-<status status="PASS" starttime="20221225 13:53:22.389" endtime="20221225 13:53:38.699"/>
+<status status="PASS" starttime="20221225 16:22:25.660" endtime="20221225 16:22:38.202"/>
 </test>
-<status status="PASS" starttime="20221225 13:53:22.183" endtime="20221225 13:53:38.699"/>
+<status status="PASS" starttime="20221225 16:22:25.459" endtime="20221225 16:22:38.202"/>
 </suite>
 <statistics>
 <total>
@@ -179,7 +37,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC07 dropdowns">TC07 dropdowns</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC10 upload">TC10 upload</stat>
 </suite>
 </statistics>
 <errors>

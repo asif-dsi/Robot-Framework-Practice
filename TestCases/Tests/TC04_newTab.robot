@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 
 *** Test Cases ***
 New Tab
+    [Tags]    Ignore
     open browser  https://www.startech.com.bd/  chrome
     maximize browser window
     click link  css:a[title='Facebook']
@@ -16,6 +17,7 @@ New Tab
     close browser
 
 New Window
+    [Tags]    Ignore
     open browser    https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm  chrome
     maximize browser window
     click button    xpath://input[@value='Open a new window']
@@ -27,6 +29,7 @@ New Window
 
 
 New Window With Handles
+    [Tags]    Ignore
     open browser    https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm  chrome
     maximize browser window
     click button    xpath://input[@value='Open a new window']
