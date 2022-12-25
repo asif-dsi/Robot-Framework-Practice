@@ -1,352 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221224 20:08:01.483" rpa="false" schemaversion="3">
-<suite id="s1" name="TC04 newTab" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Tests\TC04_newTab.robot">
-<test id="s1-t1" name="New Tab" line="5">
+<robot generator="Robot 6.0.1 (Python 3.7.0 on win32)" generated="20221225 13:53:22.182" rpa="false" schemaversion="3">
+<suite id="s1" name="TC07 dropdowns" source="C:\Users\Asif\Desktop\Practice\Python\Robot 1\TestCases\Tests\TC07_dropdowns.robot">
+<test id="s1-t1" name="Dropdowns Selection and Iterating On Webelement List" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.startech.com.bd/</arg>
-<arg>firefox</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221224 20:08:01.652" level="INFO">Opening browser 'firefox' to base url 'https://www.startech.com.bd/'.</msg>
-<msg timestamp="20221224 20:08:01.652" level="INFO">Firefox driver log is always forced to to: C:\Users\Asif\Desktop\Practice\Python\Robot 1\geckodriver-2.log</msg>
-<status status="PASS" starttime="20221224 20:08:01.652" endtime="20221224 20:08:07.943"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221224 20:08:07.943" endtime="20221224 20:08:08.202"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>css:a[title='Facebook']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221224 20:08:08.202" level="INFO">Clicking link 'css:a[title='Facebook']'.</msg>
-<status status="PASS" starttime="20221224 20:08:08.202" endtime="20221224 20:08:08.247"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:11.262" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:08.247" endtime="20221224 20:08:11.262"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>url:https://www.facebook.com/star.tech.ltd/</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:11.263" endtime="20221224 20:08:11.341"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:14.347" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:11.341" endtime="20221224 20:08:14.347"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>url:https://www.startech.com.bd/</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:14.347" endtime="20221224 20:08:14.368"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:17.376" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:14.369" endtime="20221224 20:08:17.376"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221224 20:08:17.376" endtime="20221224 20:08:27.295"/>
-</kw>
-<status status="PASS" starttime="20221224 20:08:01.652" endtime="20221224 20:08:27.295"/>
-</test>
-<test id="s1-t2" name="New Window" line="18">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm</arg>
+<arg>https://demo.automationtesting.in/Register.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221224 20:08:27.295" level="INFO">Opening browser 'chrome' to base url 'https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm'.</msg>
-<status status="PASS" starttime="20221224 20:08:27.295" endtime="20221224 20:08:32.011"/>
+<msg timestamp="20221225 13:53:22.389" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<status status="PASS" starttime="20221225 13:53:22.389" endtime="20221225 13:53:27.772"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221224 20:08:32.011" endtime="20221224 20:08:32.121"/>
+<status status="PASS" starttime="20221225 13:53:27.773" endtime="20221225 13:53:27.899"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@value='Open a new window']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221224 20:08:32.122" level="INFO">Clicking button 'xpath://input[@value='Open a new window']'.</msg>
-<status status="PASS" starttime="20221224 20:08:32.122" endtime="20221224 20:08:32.186"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:27.901"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>title:Open a New Window using JavaScript window.open() - Demo</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:32.187" endtime="20221224 20:08:33.951"/>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:27.901"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:35.964" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:33.952" endtime="20221224 20:08:35.964"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{elements}</var>
+<arg>class:form-control</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20221225 13:53:28.427" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20221225 13:53:27.901" endtime="20221225 13:53:28.427"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>title:Open a New Browser Window using JavaScript - Demo</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:35.964" endtime="20221224 20:08:35.986"/>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>3</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:28.427" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:29.543"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:37.996" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:35.987" endtime="20221224 20:08:37.996"/>
+<if>
+<branch type="IF" condition="${i}==1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Hola!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.543"/>
+</kw>
+<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.543"/>
+</branch>
+<branch type="ELSE IF" condition="${i}==2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Adios!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:29.545" endtime="20221225 13:53:29.545"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:29.545" endtime="20221225 13:53:29.545"/>
+</kw>
+<status status="NOT RUN" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.545"/>
+</branch>
+<status status="PASS" starttime="20221225 13:53:29.543" endtime="20221225 13:53:29.545"/>
+</if>
+<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:29.545"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:29.547" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:29.545" endtime="20221225 13:53:30.654"/>
+</kw>
+<if>
+<branch type="IF" condition="${i}==1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Hola!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:30.654" level="INFO">Typing text 'Hola!' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
+</kw>
+<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
+</branch>
+<branch type="ELSE IF" condition="${i}==2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Adios!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
+</kw>
+<status status="NOT RUN" starttime="20221225 13:53:31.738" endtime="20221225 13:53:31.738"/>
+</branch>
+<status status="PASS" starttime="20221225 13:53:30.654" endtime="20221225 13:53:31.738"/>
+</if>
+<status status="PASS" starttime="20221225 13:53:29.545" endtime="20221225 13:53:31.738"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:31.738" level="INFO">Typing text 'Test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="7710e2ed-37b7-4682-9c94-db40122f0dea")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:31.738" endtime="20221225 13:53:32.838"/>
+</kw>
+<if>
+<branch type="IF" condition="${i}==1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[${i}]</arg>
+<arg>Hola!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221225 13:53:32.839" endtime="20221225 13:53:32.839"/>
+</kw>
+<status status="NOT RUN" starttime="20221225 13:53:32.839" endtime="20221225 13:53:32.840"/>
+</branch>
+<branch type="ELSE IF" condition="${i}==2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Adios!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221225 13:53:32.840" endtime="20221225 13:53:32.841"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<msg timestamp="20221225 13:53:32.842" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20221225 13:53:32.841" endtime="20221225 13:53:32.842"/>
+</kw>
+<status status="PASS" starttime="20221225 13:53:32.840" endtime="20221225 13:53:32.842"/>
+</branch>
+<status status="PASS" starttime="20221225 13:53:32.838" endtime="20221225 13:53:32.842"/>
+</if>
+<status status="PASS" starttime="20221225 13:53:31.738" endtime="20221225 13:53:32.842"/>
+</iter>
+<status status="PASS" starttime="20221225 13:53:28.427" endtime="20221225 13:53:32.842"/>
+</for>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[0]</arg>
+<arg>Hello-Replaced</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:32.844" level="INFO">Typing text 'Hello-Replaced' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="c9d3f862-dba0-4367-bfb6-6b0de72631b9")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:32.843" endtime="20221225 13:53:33.946"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[1]</arg>
+<arg>World-Replaced</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:33.947" level="INFO">Typing text 'World-Replaced' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="8d29a64f-7837-4be7-94eb-4a1ce093a888")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:33.947" endtime="20221225 13:53:35.043"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elements}[2]</arg>
+<arg>Dhaka-1205</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221225 13:53:35.043" level="INFO">Typing text 'Dhaka-1205' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8707cdf716edd6f760f2a9806861c1fe", element="7710e2ed-37b7-4682-9c94-db40122f0dea")&gt;'.</msg>
+<status status="PASS" starttime="20221225 13:53:35.043" endtime="20221225 13:53:36.122"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221224 20:08:37.996" endtime="20221224 20:08:40.117"/>
+<status status="PASS" starttime="20221225 13:53:36.123" endtime="20221225 13:53:38.699"/>
 </kw>
-<status status="PASS" starttime="20221224 20:08:27.295" endtime="20221224 20:08:40.117"/>
+<status status="PASS" starttime="20221225 13:53:22.389" endtime="20221225 13:53:38.699"/>
 </test>
-<test id="s1-t3" name="New Window With Handles" line="28">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221224 20:08:40.117" level="INFO">Opening browser 'chrome' to base url 'https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm'.</msg>
-<status status="PASS" starttime="20221224 20:08:40.117" endtime="20221224 20:08:45.385"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221224 20:08:45.385" endtime="20221224 20:08:45.499"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@value='Open a new window']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221224 20:08:45.500" level="INFO">Clicking button 'xpath://input[@value='Open a new window']'.</msg>
-<status status="PASS" starttime="20221224 20:08:45.499" endtime="20221224 20:08:45.567"/>
-</kw>
-<kw name="Get Window Handles" library="SeleniumLibrary">
-<var>${handles}</var>
-<doc>Returns all child window handles of the selected browser as a list.</doc>
-<msg timestamp="20221224 20:08:45.574" level="INFO">${handles} = ['CDwindow-CAF739DEBFF610628BC0715C6E6D42D9', 'CDwindow-71C64FDD10C25CC4C536AA9FFCC5E088']</msg>
-<status status="PASS" starttime="20221224 20:08:45.568" endtime="20221224 20:08:45.574"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>${handles}[1]</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:45.575" endtime="20221224 20:08:45.598"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:47.604" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:45.599" endtime="20221224 20:08:47.604"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>${handles}[0]</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20221224 20:08:47.605" endtime="20221224 20:08:47.614"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221224 20:08:49.628" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221224 20:08:47.615" endtime="20221224 20:08:49.628"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221224 20:08:49.628" endtime="20221224 20:08:51.716"/>
-</kw>
-<status status="PASS" starttime="20221224 20:08:40.117" endtime="20221224 20:08:51.716"/>
-</test>
-<test id="s1-t4" name="Navigate Between Pages" line="39">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.youtube.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221224 20:08:51.716" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20221224 20:08:51.716" endtime="20221224 20:08:53.856"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<msg timestamp="20221224 20:08:53.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00CEF243]
-	(No symbol) [0x00C77FD1]
-	(No symbol) [0x00B6D04D]
-	(No symbol) [0x00B52D7A]
-	(No symbol) [0x00BBBE7B]
-	(No symbol) [0x00BCC196]
-	(No symbol) [0x00BB8386]
-	(No symbol) [0x00B9163C]
-	(No symbol) [0x00B9269D]
-	GetHandleVerifier [0x00F89A22+2655074]
-	GetHandleVerifier [0x00F7CA24+2601828]
-	GetHandleVerifier [0x00D98C0A+619850]
-	GetHandleVerifier [0x00D97830+614768]
-	(No symbol) [0x00C805FC]
-	(No symbol) [0x00C85968]
-	(No symbol) [0x00C85A55]
-	(No symbol) [0x00C9051B]
-	BaseThreadInitThunk [0x76B200F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
-</msg>
-<msg timestamp="20221224 20:08:53.863" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00CEF243]
-	(No symbol) [0x00C77FD1]
-	(No symbol) [0x00B6D04D]
-	(No symbol) [0x00B52D7A]
-	(No symbol) [0x00BBBE7B]
-	(No symbol) [0x00BCC196]
-	(No symbol) [0x00BB8386]
-	(No symbol) [0x00B9163C]
-	(No symbol) [0x00B9269D]
-	GetHandleVerifier [0x00F89A22+2655074]
-	GetHandleVerifier [0x00F7CA24+2601828]
-	GetHandleVerifier [0x00D98C0A+619850]
-	GetHandleVerifier [0x00D97830+614768]
-	(No symbol) [0x00C805FC]
-	(No symbol) [0x00C85968]
-	(No symbol) [0x00C85A55]
-	(No symbol) [0x00C9051B]
-	BaseThreadInitThunk [0x76B200F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
-</msg>
-<status status="FAIL" starttime="20221224 20:08:53.857" endtime="20221224 20:08:53.866"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.866" endtime="20221224 20:08:53.867"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${location}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://www.amazon.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.867" endtime="20221224 20:08:53.867"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${location}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.868" endtime="20221224 20:08:53.868"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.869" endtime="20221224 20:08:53.869"/>
-</kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.870" endtime="20221224 20:08:53.870"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.870" endtime="20221224 20:08:53.870"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${location}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.871" endtime="20221224 20:08:53.871"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20221224 20:08:53.872" endtime="20221224 20:08:53.872"/>
-</kw>
-<status status="FAIL" starttime="20221224 20:08:51.716" endtime="20221224 20:08:53.872">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00CEF243]
-	(No symbol) [0x00C77FD1]
-	(No symbol) [0x00B6D04D]
-	(No symbol) [0x00B52D7A]
-	(No symbol) [0x00BBBE7B]
-	(No symbol) [0x00BCC196]
-	(No symbol) [0x00BB8386]
-	(No symbol) [0x00B9163C]
-	(No symbol) [0x00B9269D]
-	GetHandleVerifier [0x00F89A22+2655074]
-	GetHandleVerifier [0x00F7CA24+2601828]
-	GetHandleVerifier [0x00D98C0A+619850]
-	GetHandleVerifier [0x00D97830+614768]
-	(No symbol) [0x00C805FC]
-	(No symbol) [0x00C85968]
-	(No symbol) [0x00C85A55]
-	(No symbol) [0x00C9051B]
-	BaseThreadInitThunk [0x76B200F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
-</status>
-</test>
-<status status="FAIL" starttime="20221224 20:08:01.483" endtime="20221224 20:08:53.875"/>
+<status status="PASS" starttime="20221225 13:53:22.183" endtime="20221225 13:53:38.699"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="1" skip="0" id="s1" name="TC04 newTab">TC04 newTab</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC07 dropdowns">TC07 dropdowns</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221224 20:08:53.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00CEF243]
-	(No symbol) [0x00C77FD1]
-	(No symbol) [0x00B6D04D]
-	(No symbol) [0x00B52D7A]
-	(No symbol) [0x00BBBE7B]
-	(No symbol) [0x00BCC196]
-	(No symbol) [0x00BB8386]
-	(No symbol) [0x00B9163C]
-	(No symbol) [0x00B9269D]
-	GetHandleVerifier [0x00F89A22+2655074]
-	GetHandleVerifier [0x00F7CA24+2601828]
-	GetHandleVerifier [0x00D98C0A+619850]
-	GetHandleVerifier [0x00D97830+614768]
-	(No symbol) [0x00C805FC]
-	(No symbol) [0x00C85968]
-	(No symbol) [0x00C85A55]
-	(No symbol) [0x00C9051B]
-	BaseThreadInitThunk [0x76B200F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77277BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77277B8E+238]
-</msg>
 </errors>
 </robot>

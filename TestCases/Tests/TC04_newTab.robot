@@ -25,6 +25,7 @@ New Window
     sleep    2
     close browser
 
+
 New Window With Handles
     open browser    https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm  chrome
     maximize browser window
